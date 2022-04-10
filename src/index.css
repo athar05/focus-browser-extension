@@ -3,9 +3,7 @@ body {
   font-family: 'roboto',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-image: "..assets/images/bg-image-1.jpg";
-  /* -moz-osx-font-smoothing: grayscale; */
-  /* background-color: black; */
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
