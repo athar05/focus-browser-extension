@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Images } from "../../public/backend/images";
+import { Images } from "../backend/images";
+import NameForm from "../components/NameForm";
+import NameButton from "../components/NameButton";
 
 function Name() {
-  const randImage = Math.floor(Math.random() * Math.floor(Images.length));
-  console.log(randImage);
   const storedName = localStorage.getItem("name");
   console.log(storedName);
-  // useEffect(console.log("HEllo"), []);
-  return (
-    <div>
-      <h1>Hello, please enter your name</h1>
-    </div>
-  );
+  return <div>{storedName ? <NameButton /> : <NameForm />}</div>;
 }
 
 export default Name;
