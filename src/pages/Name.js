@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-import { Images } from "../backend/images";
 import NameForm from "../components/NameForm";
 import NameButton from "../components/NameButton";
 

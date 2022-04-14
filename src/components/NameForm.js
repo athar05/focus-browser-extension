@@ -1,8 +1,6 @@
-import React from "react";
-
 function NameForm() {
   return (
-    <>
+    <div className="name-form">
       <h1>Hello, what should we call you?</h1>{" "}
       <form
         onSubmit={(e) => {
@@ -20,7 +18,7 @@ function NameForm() {
           }}
         />
       </form>
-    </>
+    </div>
   );
 }
 
