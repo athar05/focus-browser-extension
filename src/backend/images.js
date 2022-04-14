@@ -1,4 +1,4 @@
-const images = [
+export const Images = [
   {
     id: "1",
     img: "/assets/images/bg-image-1.jpg",
