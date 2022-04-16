@@ -1,19 +1,30 @@
-import React from "react";
-import TodoInputState from "../custom-hooks/TodoInputState";
+import { useState } from "react";
 
-function TodoForm({ addTodo }) {
-  const [value, handleChange, reset] = TodoInputState("");
+function FocusForm({ addTodo }) {
+  const [focus, setFocus] = useState("");
+  const mainFocus = localStorage.getItem("focus");
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        addTodo(value);
-        reset();
-      }}
-    >
-      <input value={value} onChange={handleChange} />
-    </form>
+    <>
+      <h2>What is your main focus today?</h2>
+
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
+        <input
+          className="input-field"
+          onKeyPress={(e) => {
+            if (e.key === "Enter") {
+              localStorage.setItem("focus", e.target.value);
+            }
+          }}
+        />
+
+        <h2>Your Focus For Today is {mainFocus}</h2>
+      </form>
+    </>
   );
 }
 
-export default TodoForm;
+export default FocusForm;
