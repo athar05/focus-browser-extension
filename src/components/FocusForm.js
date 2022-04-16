@@ -1,28 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import FocusDisplay from "./FocusDisplay";
+import OGFocusForm from "./OGFocusForm";
 
-function FocusForm({ addTodo }) {
-  const [focus, setFocus] = useState("");
-  const mainFocus = localStorage.getItem("focus");
+function FocusForm() {
+  const getFocus = localStorage.getItem("focus");
+
   return (
     <>
-      <h2>What is your main focus today?</h2>
-
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-        }}
-      >
-        <input
-          className="input-field"
-          onKeyPress={(e) => {
-            if (e.key === "Enter") {
-              localStorage.setItem("focus", e.target.value);
-            }
-          }}
-        />
-
-        <h2>Your Focus For Today is {mainFocus}</h2>
-      </form>
+      {!getFocus ? (
+        <>
+          <OGFocusForm />
+        </>
+      ) : (
+        <>
+          <FocusDisplay />
+        </>
+      )}
     </>
   );
 }
