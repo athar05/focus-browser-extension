@@ -9,7 +9,7 @@ function NameButton() {
         <h1>Welcome, {storedName}! </h1>
       </div>
       <Link to="/focus">
-        <button className="name-page-button">Proceed</button>;
+        <button className="focus-button">Proceed</button>;
       </Link>
     </div>
   );

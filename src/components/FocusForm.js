@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFocus } from "../context/FocusProvider";
 
 function FocusForm() {
@@ -8,28 +8,28 @@ function FocusForm() {
 
   const { focus, setFocus } = useFocus();
 
+  const [focusInput, setFocusInput] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    localStorage.setItem("focus", focusInput);
+    setFocus(localStorage.getItem("focus"));
+    console.log(localStorage.getItem("focus"));
+  };
+
   return (
     <div className="focus-form">
       {" "}
       <h2>What is your main focus today?</h2>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-        }}
-      >
+      <form onSubmit={handleSubmit}>
         <input
           className="input-field"
-          onKeyPress={(e) => {
-            if (e.key === "Enter") {
-              localStorage.setItem("focus", e.target.value);
-              // localStorage.focusDate = today.getDate();
-              // localStorage.focusString = e.target.value;
-              // setFocus(localStorage.getItem("focus"));
-              setFocus(localStorage.getItem("focus"));
-              console.log(localStorage.getItem("focus"));
-            }
-          }}
+          onChange={(e) => setFocusInput(e.target.value)}
         />
+        <button type="submit" className="focus-button">
+          Add Focus
+        </button>
       </form>
     </div>
   );
