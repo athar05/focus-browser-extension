@@ -1,23 +1,13 @@
-import { useState, useEffect } from "react";
 import FocusDisplay from "./FocusDisplay";
 import OGFocusForm from "./OGFocusForm";
+import { useFocus } from "../context/FocusProvider";
 
 function FocusForm() {
-  const getFocus = localStorage.getItem("focus");
+  // const getFocus = localStorage.getItem("focus");
+  const { focus } = useFocus();
 
-  return (
-    <>
-      {!getFocus ? (
-        <>
-          <OGFocusForm />
-        </>
-      ) : (
-        <>
-          <FocusDisplay />
-        </>
-      )}
-    </>
-  );
+  // console.log(focus);
+  return <>{focus ? <FocusDisplay /> : <OGFocusForm />}</>;
 }
 
 export default FocusForm;

@@ -1,10 +1,15 @@
 import React, { useState } from "react";
+import { useFocus } from "../context/FocusProvider";
 
 function OGFocusForm() {
-  const [focus, setFocus] = useState(null);
+  // is the local storage exist?
+  // const [focus, setFocus] = useState(null);
   const today = new Date();
+
+  const { focus, setFocus } = useFocus();
+
   return (
-    <div>
+    <div className="focus-form">
       {" "}
       <h2>What is your main focus today?</h2>
       <form
@@ -23,8 +28,10 @@ function OGFocusForm() {
                   date: today.getDate(),
                 })
               );
-              setFocus(localStorage.getItem("focus"));
-              console.log(focus);
+              localStorage.focusDate = today.getDate();
+              localStorage.focusString = e.target.value;
+              // setFocus(localStorage.getItem("focus"));
+              setFocus(localStorage.getItem("focusString"));
             }
           }}
         />

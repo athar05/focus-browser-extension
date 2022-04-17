@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import { FocusProvider } from "./context/FocusProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <FocusProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </FocusProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
