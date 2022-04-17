@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Quote from "../components/Quote";
 import Clock from "../components/Clock";
-import FocusForm from "../components/FocusForm";
+import FocusElement from "../components/FocusElement";
 import Weather from "../components/Weather";
 
 function Focus() {
@@ -20,7 +20,7 @@ function Focus() {
         <Clock />
       </div>
       <div className="focus-form-component">
-        <FocusForm />
+        <FocusElement />
       </div>
       <div className="quote-component">
         <Quote />
