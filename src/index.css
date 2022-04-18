@@ -16,8 +16,11 @@ code {
 
 h1 {
   font: inherit;
+  color: white;
   font-size: 4rem;
   font-weight: 100;
+  background-color: black;
+  opacity: 0.7;
 }
 
 h2, h3 {
