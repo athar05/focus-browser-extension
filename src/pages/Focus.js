@@ -6,6 +6,7 @@ import Weather from "../components/Weather";
 
 function Focus() {
   const [storageExist, setStorageExist] = useState(false);
+  console.log("test");
 
   // const [focusItem, setFocusItem] = useState([{ id: null, task: "" }]);
   // const addTodo = (newTodoText) => {
