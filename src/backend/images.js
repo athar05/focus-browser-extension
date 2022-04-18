@@ -19,4 +19,24 @@ export const Images = [
     id: "5",
     img: "/assets/images/bg-image-5.jpg",
   },
+  {
+    id: "6",
+    img: "/assets/images/bg-image-6.jpg",
+  },
+  {
+    id: "7",
+    img: "/assets/images/bg-image-7.jpg",
+  },
+  {
+    id: "8",
+    img: "/assets/images/bg-image-8.jpg",
+  },
+  {
+    id: "9",
+    img: "/assets/images/bg-image-9.jpg",
+  },
+  {
+    id: "10",
+    img: "/assets/images/bg-image-10.jpg",
+  },
 ];

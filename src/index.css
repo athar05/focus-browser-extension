@@ -18,14 +18,17 @@ h1 {
   font: inherit;
   font-size: 4rem;
   font-weight: 100;
-  padding: 0.5rem 0.5rem;
-  color: white;
-  background-color: black;
-  opacity: 0.5;
 }
 
-h3, h4 {
+h2, h3 {
   font: inherit;
+  color: white;
+  font-size: 2rem
+}
+
+h4 {
+  font-size: 1.2rem;
+  color: white;
 }
 
 .app-component {
@@ -39,13 +42,14 @@ h3, h4 {
   border: none;
   border-bottom:0.15rem solid white;
   color: white;
-  width: 20rem;
+  width: 100%;
   background: none;
   height: 3rem;
 }
 
-.name-page-button {
-  padding: 0.5rem 1.5rem;
+.focus-button {
+  padding: 0.75rem 2rem;
+  margin: 0.5rem 0;
   background-color: black;
   color: white;
   border-radius: 0.25rem;
@@ -53,6 +57,7 @@ h3, h4 {
   opacity: 0.8;
   cursor: pointer;
   transition: 0.5ms;
+  font-size: 1rem;
 }
 
 .name-form{
@@ -61,8 +66,10 @@ h3, h4 {
 align-items: center;
 }
 
-.name-page-button:hover {
-  padding: 0.6rem 1.6rem;
+.focus-button:hover {
+ background-color: white;
+ /* border: 1px solid black; */
+ color: black;
 }
 
 .input-field:focus {
@@ -74,4 +81,58 @@ align-items: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.welcome-message {
+  padding: 0.5rem 0.5rem;
+  color: white;
+  background-color: black;
+  opacity: 0.8;
+  border-radius: 0.25rem;
+}
+
+.quote {
+  background-color: black;
+  opacity: 0.7;
+  padding: 0 0.5rem;
+}
+
+.time-component {
+  display: inline-block;
+  background-color: black;
+  font-size: 3rem;
+  color: white;
+  padding: 0.5rem 0.5rem;
+  opacity: 0.8;
+  border-radius: 0.25rem;
+}
+
+.weather-component {
+  display: flex;
+  padding: 0.25rem 0.5rem;
+  margin: 2rem 0;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+  font-size: 2rem;
+  border-radius: 0.25rem;
+}
+.weather-icon{
+  display: flex;
+  align-items: center;
+}
+
+.quote-component {
+  min-width: 100vw;
+  text-align: center;
+}
+
+.focus-parent {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  /* justify-content: space-around; */
+  align-items:center;
 }

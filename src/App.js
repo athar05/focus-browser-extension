@@ -1,6 +1,7 @@
 import Name from "./pages/Name";
 import { Images } from "../src/backend/images";
 import { Routes, Route } from "react-router-dom";
+import Focus from "./pages/Focus";
 
 function App() {
   const randNum = Math.floor(Math.random() * Math.floor(Images.length));
@@ -13,6 +14,7 @@ function App() {
     >
       <Routes>
         <Route path="/" element={<Name />} />
+        <Route path="/focus" element={<Focus />} />
       </Routes>
     </div>
   );
