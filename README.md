@@ -1,8 +1,8 @@
-#Focus Broswer Extension
+# Focus Broswer Extension
 
 This is a browser extension built using HTML, CSS & React.JS
 
-##Features
+## Features
 
 - A good user onboarding
 - Display time, current weather in sync
